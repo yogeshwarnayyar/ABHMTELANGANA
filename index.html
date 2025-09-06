@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhil Bharat Hindu Mahasabha Telangana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-saffron: #FF9933;
+            --pastel-saffron: #FFE0B3;
+            --light-saffron: #FFF5E6;
+            --dark-saffron: #E6851A;
+            --deep-saffron: #CC7A00;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a5568;
+            --text-light: #718096;
+            --white: #FFFFFF;
+            --light-gray: #F7FAFC;
+            --gray-100: #EDF2F7;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E0;
+            --accent-gradient: linear-gradient(135deg, #FF9933 0%, #FFB366 50%, #FFCC99 100%);
+            --hero-gradient: linear-gradient(135deg, #FF9933 0%, #FFB366 25%, #FFC080 50%, #FFD1A3 75%, #FFE0B3 100%);
+            --card-gradient: linear-gradient(145deg, #FFFFFF 0%, #FFF8F0 100%);
+            --shadow-sm: 0 2px 4px rgba(255, 153, 51, 0.1);
+            --shadow-md: 0 8px 16px rgba(255, 153, 51, 0.12);
+            --shadow-lg: 0 16px 32px rgba(255, 153, 51, 0.15);
+            --shadow-xl: 0 24px 48px rgba(255, 153, 51, 0.18);
+            --shadow-2xl: 0 32px 64px rgba(255, 153, 51, 0.2);
+            --border-radius: 16px;
+            --border-radius-lg: 24px;
+            --border-radius-xl: 32px;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 153, 51, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #FFFFFF 0%, #FFF9F0 50%, #FFF5E6 100%);
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(255, 153, 51, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 180, 102, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(255, 204, 128, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 40px;
+            width: 100%;
+        }
+
+        /* Header styling removed for seamless design */
+
+        /* Navigation */
+        nav {
+            background: transparent;
+            backdrop-filter: none;
+            padding: 3rem 0 1rem 0;
+            border-bottom: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            box-shadow: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        nav .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: 4rem;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #2d3748;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.025em;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.75rem 1rem;
+            text-align: center;
+            white-space: nowrap;
+            min-height: 44px;
+        }
+
+        .nav-item:hover {
+            color: var(--primary-saffron);
+            transform: translateY(-1px);
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-saffron);
+            transition: width 0.3s ease;
+        }
+
+        .nav-item:hover::after {
+            width: 100%;
+        }
+
+        .nav-item.active::after {
+            width: 100%;
+        }
+
+        /* Remove all the old nav-item styling */
+        .nav-item::before {
+            display: none;
+        }
+
+        .nav-icon {
+            display: none;
+        }
+
+        .nav-text {
+            display: contents;
+        }
+
+        .nav-join {
+            color: var(--primary-saffron) !important;
+            font-weight: 600 !important;
+            border-bottom: 2px solid var(--primary-saffron) !important;
+            padding-bottom: 0.5rem !important;
+        }
+
+        .nav-join:hover {
+            color: var(--dark-saffron) !important;
+            border-bottom-color: var(--dark-saffron) !important;
+            transform: translateY(-1px) !important;
+        }
+
+        .nav-join::after {
+            display: none !important;
+        }
+
+        .nav-join .nav-icon {
+            color: var(--white);
+        }
+
+        .nav-join .nav-text {
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 12rem 0 8rem 0;
+            text-align: center;
+            background: 
+                linear-gradient(135deg, rgba(255, 153, 51, 0.05) 0%, rgba(255, 180, 102, 0.03) 50%, transparent 100%),
+                linear-gradient(45deg, var(--white) 0%, #FFF9F0 50%, var(--light-saffron) 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 153, 51, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 180, 102, 0.06) 0%, transparent 40%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" patternUnits="userSpaceOnUse" width="20" height="20"><circle cx="10" cy="10" r="1" fill="rgba(255,153,51,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            pointer-events: none;
+            animation: hero-float 8s ease-in-out infinite;
+        }
+
+        @keyframes hero-float {
+            0%, 100% { transform: translateY(0px) scale(1); opacity: 0.8; }
+            50% { transform: translateY(-5px) scale(1.01); opacity: 1; }
+        }
+
+        .hero-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--dark-saffron) 50%, var(--primary-saffron) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-title-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+        }
+
+        .main-title {
+            font-size: 5rem;
+            margin-bottom: 0;
+            background: linear-gradient(135deg, var(--primary-saffron) 0%, var(--dark-saffron) 50%, var(--deep-saffron) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+
+        .sub-title {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            background: linear-gradient(135deg, var(--primary-saffron) 0%, var(--dark-saffron) 50%, var(--deep-saffron) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: nowrap;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-logo {
+            height: 160px;
+            width: auto;
+            flex-shrink: 0;
+            filter: drop-shadow(0 6px 20px rgba(255, 153, 51, 0.4));
+            transition: transform 0.3s ease, filter 0.3s ease;
+            order: -1;
+        }
+
+        .hero-logo:hover {
+            transform: scale(1.08);
+            filter: drop-shadow(0 8px 24px rgba(255, 153, 51, 0.5));
+        }
+
+        .hero-tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--primary-saffron);
+            margin-bottom: 4rem;
+            letter-spacing: 0.3px;
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-tagline::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 4px;
+            background: var(--accent-gradient);
+            margin: 2rem auto;
+            border-radius: 2px;
+        }
+
+        .mission-statement {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            max-width: 1400px;
+            margin: 0 auto 5rem;
+            line-height: 1.8;
+            font-weight: 400;
+            background: var(--card-gradient);
+            padding: 4rem 6rem;
+            border-radius: var(--border-radius-xl);
+            box-shadow: var(--shadow-xl);
+            border: 2px solid var(--glass-border);
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(10px);
+            text-align: left;
+        }
+
+        .mission-statement::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-gradient);
+            border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+        }
+
+        .mission-highlight {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .name-highlight {
+            color: var(--deep-saffron);
+            font-weight: 800;
+            font-style: italic;
+            text-decoration: underline;
+            text-decoration-color: var(--primary-saffron);
+            text-underline-offset: 3px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.25rem 2.5rem;
+            text-decoration: none;
+            border-radius: var(--border-radius-lg);
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-primary {
+            background: var(--accent-gradient);
+            color: var(--white);
+            border-color: var(--primary-saffron);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-2xl);
+            background: linear-gradient(135deg, var(--deep-saffron) 0%, var(--primary-saffron) 100%);
+        }
+
+        .cta-secondary {
+            background: var(--card-gradient);
+            color: var(--primary-saffron);
+            border-color: var(--primary-saffron);
+        }
+
+        .cta-secondary:hover {
+            background: var(--primary-saffron);
+            color: var(--white);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .cta-secondary:hover {
+            background: var(--gray-100);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Initiatives Section */
+        .initiatives {
+            padding: 8rem 0;
+            background: 
+                linear-gradient(135deg, rgba(255, 153, 51, 0.02) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 180, 102, 0.02) 100%),
+                var(--light-gray);
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Merriweather', serif;
+            font-size: 3rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 6px;
+            background: var(--accent-gradient);
+            margin: 2rem auto;
+            border-radius: 3px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .initiatives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .initiative-card {
+            background: var(--card-gradient);
+            padding: 3rem;
+            border-radius: var(--border-radius-xl);
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .initiative-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .initiative-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 153, 51, 0.05) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .initiative-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--primary-saffron);
+        }
+
+        .initiative-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .initiative-card:hover::after {
+            opacity: 1;
+        }
+
+        .initiative-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-gradient);
+            border-radius: var(--border-radius-lg);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--white);
+            border: 3px solid var(--primary-saffron);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .initiative-card:hover .initiative-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .initiative-card h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.25rem;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .initiative-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .learn-more {
+            color: var(--primary-saffron);
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--primary-saffron);
+            border-radius: var(--border-radius);
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .learn-more::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--accent-gradient);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .learn-more:hover::before {
+            left: 0;
+        }
+
+        .learn-more:hover {
+            color: var(--white);
+            transform: translateX(3px) translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Leadership Section */
+        .leadership {
+            padding: 7rem 0;
+            background: var(--white);
+        }
+
+        .leadership-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .founding-figures, .current-leadership {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-100);
+        }
+
+        .leadership h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.75rem;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .leader {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            transition: all 0.2s ease;
+            border: 1px solid var(--gray-100);
+        }
+
+        .leader:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .leader-avatar {
+            width: 52px;
+            height: 52px;
+            background: var(--accent-gradient);
+            border-radius: 50%;
+            margin-right: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--white);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .leader-info h4 {
+            color: var(--text-primary);
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .leader-info p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: var(--white);
+            padding: 4rem 0 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.375rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .footer-section p {
+            opacity: 0.9;
+            line-height: 1.6;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+            margin-top: 3rem;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        
+        /* Tablet and medium screens */
+        @media (max-width: 1024px) {
+            .hero-title-container {
+                gap: 2rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .hero-title {
+                text-align: center;
+            }
+
+            .main-title {
+                font-size: 4rem;
+            }
+
+            .sub-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-logo {
+                height: 140px;
+            }
+        }
+
+        /* Mobile-first approach */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+                max-width: 100%;
+            }
+
+            /* Mobile Navigation - Horizontal inline layout like desktop */
+            nav {
+                padding: 2rem 0 1rem 0;
+                position: relative;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1.2rem;
+                position: static;
+                background: transparent;
+                backdrop-filter: none;
+                height: auto;
+                max-width: 100%;
+                padding: 1rem 0.5rem;
+                align-items: center;
+                justify-content: center;
+                line-height: 1;
+            }
+
+            .nav-item {
+                font-size: 0.9rem;
+                padding: 0.5rem 0;
+                width: auto;
+                text-align: center;
+                border-bottom: none;
+                color: var(--text-primary);
+                transition: all 0.3s ease;
+                border-radius: 0;
+                background: transparent;
+                box-shadow: none;
+                margin: 0;
+                min-width: auto;
+                display: inline-block;
+                text-decoration: none;
+                font-weight: 500;
+                letter-spacing: 0.025em;
+                position: relative;
+            }
+
+            .nav-item:hover {
+                color: var(--primary-saffron);
+                transform: translateY(-1px);
+                box-shadow: none;
+                background: transparent;
+            }
+
+            .nav-item::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: var(--primary-saffron);
+                transition: width 0.3s ease;
+            }
+
+            .nav-item:hover::after {
+                width: 100%;
+            }
+
+            .nav-item.nav-join {
+                color: var(--primary-saffron);
+                background: transparent;
+                font-weight: 600;
+                margin-top: 0;
+                border-radius: 0;
+                box-shadow: none;
+                text-decoration: underline;
+                text-decoration-color: var(--primary-saffron);
+                text-underline-offset: 3px;
+            }
+
+            .nav-item.nav-join:hover {
+                color: var(--secondary-saffron);
+                background: transparent;
+                transform: translateY(-1px);
+                box-shadow: none;
+                text-decoration-color: var(--secondary-saffron);
+            }
+
+            .nav-item.nav-join::after {
+                display: none;
+            }
+
+            /* Mobile Hero Section - Improved layout */
+            .hero {
+                padding: 2rem 0;
+                min-height: auto;
+                text-align: center;
+            }
+
+            .hero-content {
+                text-align: center;
+                padding: 0;
+            }
+
+            .hero-title {
+                line-height: 1.2;
+                margin-bottom: 0.5rem;
+                padding: 0 10px;
+                word-wrap: break-word;
+                hyphens: auto;
+                text-align: center;
+            }
+
+            .main-title {
+                font-size: 2.5rem;
+                margin-bottom: 0;
+            }
+
+            .sub-title {
+                font-size: 1.8rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero-title-container {
+                flex-direction: column;
+                gap: 1.5rem;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            .hero-logo {
+                height: 110px;
+                order: 0;
+            }
+
+            .hero-tagline {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+                padding: 0 15px;
+                line-height: 1.4;
+            }
+
+            .mission-statement {
+                max-width: 100%;
+                padding: 1.5rem;
+                font-size: 1rem;
+                line-height: 1.6;
+                margin: 1.5rem 0;
+                text-align: left;
+                border-radius: 15px;
+            }
+
+            /* Mobile CTA Buttons */
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                padding: 0 15px;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            /* Mobile Sections */
+            .section-title {
+                font-size: 2rem;
+                padding: 0 15px;
+                text-align: center;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+                padding: 0 15px;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .initiatives-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 10px;
+            }
+
+            .leadership-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 10px;
+            }
+
+            /* Mobile Cards */
+            .initiative-card, .leader-card {
+                padding: 1.5rem;
+                margin: 0.5rem 0;
+            }
+
+            /* Mobile Footer */
+            footer {
+                padding: 3rem 0 2rem;
+            }
+
+            .footer-content {
+                text-align: center;
+                padding: 0 15px;
+            }
+
+            .footer-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+
+            /* Mobile Sections */
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .initiatives-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .leadership-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            /* Mobile Cards */
+            .initiative-card, .leader-card {
+                padding: 1.5rem;
+            }
+
+            /* Mobile Footer */
+            footer {
+                padding: 3rem 0 2rem;
+            }
+
+            .footer-content {
+                text-align: center;
+            }
+        }
+
+        /* Extra small mobile devices */
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 0.8rem;
+                padding: 1rem 0.25rem;
+            }
+
+            .nav-item {
+                font-size: 0.85rem;
+                padding: 0.4rem 0;
+            }
+
+            .hero-title {
+                font-size: 1.75rem;
+                padding: 0 5px;
+            }
+
+            .hero-tagline {
+                font-size: 1.1rem;
+                padding: 0 10px;
+            }
+
+            .mission-statement {
+                padding: 1.25rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Tablet responsive */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                max-width: 1200px;
+                padding: 0 40px;
+            }
+
+            nav {
+                padding: 3rem 0 1rem 0;
+                position: absolute;
+                background: transparent;
+                backdrop-filter: none;
+                box-shadow: none;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                gap: 2.5rem;
+                position: static;
+                background: transparent;
+                backdrop-filter: none;
+                height: auto;
+                justify-content: center;
+                align-items: center;
+                max-width: 700px;
+                padding: 0;
+            }
+
+            .nav-item {
+                font-size: 0.95rem;
+                padding: 0.75rem 0.75rem;
+                background: transparent;
+                box-shadow: none;
+                border-radius: 0;
+                margin: 0;
+                min-width: auto;
+            }
+
+            .nav-item:hover {
+                box-shadow: none;
+            }
+
+            .nav-item.nav-join:hover {
+                box-shadow: none;
+            }
+
+            .mission-statement {
+                max-width: 1000px;
+                padding: 2.5rem 3rem;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.4rem;
+            }
+
+            .initiatives-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .leadership-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop responsive */
+        @media (min-width: 1025px) {
+            nav {
+                padding: 3rem 0 1rem 0;
+                position: absolute;
+                background: transparent;
+                backdrop-filter: none;
+                box-shadow: none;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                gap: 4rem;
+                position: static;
+                background: transparent;
+                backdrop-filter: none;
+                height: auto;
+                justify-content: center;
+                align-items: center;
+                max-width: 800px;
+                padding: 0;
+            }
+
+            .nav-item {
+                font-size: 1rem;
+                padding: 0.75rem 1rem;
+                border: none;
+                width: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: transparent;
+                box-shadow: none;
+                border-radius: 0;
+                margin: 0;
+                min-width: auto;
+            }
+
+            .nav-item:hover {
+                box-shadow: none;
+            }
+
+            .nav-item.nav-join:hover {
+                box-shadow: none;
+            }
+        }
+
+        /* Large desktop */
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 1600px;
+                padding: 0 50px;
+            }
+
+            .hero-title {
+                font-size: 4.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+
+            .mission-statement {
+                max-width: 1300px;
+                padding: 4rem 5rem;
+                font-size: 1.4rem;
+            }
+
+            .nav-links {
+                gap: 4rem;
+            }
+
+            .nav-item {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading state - Fixed to show content immediately */
+        body {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        /* Enhanced hover effects */
+        .initiative-card, .leader-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .initiative-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(255, 153, 51, 0.15);
+        }
+
+        .leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Pulse animation for CTA buttons */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .cta-button:hover {
+            animation: pulse 0.6s ease-in-out;
+        }
+
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Staggered animations */
+        .initiative-card:nth-child(1) { animation-delay: 0.1s; }
+        .initiative-card:nth-child(2) { animation-delay: 0.2s; }
+        .initiative-card:nth-child(3) { animation-delay: 0.3s; }
+        .initiative-card:nth-child(4) { animation-delay: 0.4s; }
+
+        /* Parallax effect for hero section */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--light-saffron) 0%, transparent 50%);
+            opacity: 0.3;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section completely removed for seamless design -->
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#initiatives" class="nav-item">Initiatives</a></li>
+                <li><a href="#leadership" class="nav-item">Leadership</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+                <li><a href="https://forms.gle/zxmH3HABuhjWWwUh6" class="nav-item nav-join" target="_blank" rel="noopener">Join Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-title-container">
+                <img src="logo.png" alt="ABHM Telangana Logo" class="hero-logo">
+                <div class="hero-title-wrapper">
+                    <h2 class="hero-title sub-title">Akhil Bharat Hindu Mahasabha</h2>
+                    <h1 class="hero-title main-title">Telangana</h1>
+                </div>
+            </div>
+            <h3 class="hero-tagline">Empowering Humanity Through Hinduism</h3>
+            <p class="mission-statement">
+                Continuing the <span class="mission-highlight">legacy of Akhil Bharatiya Hindu Mahasabha</span>, founded in 1915 by the visionary <span class="mission-highlight name-highlight">Madan Mohan Malaviya</span>, we stand rooted in the principles of Hindutva and Hindu nationalism. Our Telangana chapter is dedicated to preserving our cultural heritage, promoting social welfare, and strengthening community bonds across the state.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://forms.gle/zxmH3HABuhjWWwUh6" class="cta-button cta-primary"> Join Hands for Humanity </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="initiatives" class="initiatives">
+        <div class="container">
+            <h2 class="section-title">Our Initiatives in Telangana</h2>
+            <p class="section-subtitle">Dedicated programs serving our communities across the state</p>
+            <div class="initiatives-grid">
+                <div class="initiative-card">
+                    <div class="initiative-icon">🏛️</div>
+                    <h3>Heritage Programs</h3>
+                    <p>Preserving and promoting Hindu cultural heritage through educational workshops, temple restoration projects, and cultural festivals across Telangana.</p>
+                    <a href="https://www.abhm.org.in/about.aspx" class="learn-more">Learn More →</a>
+                </div>
+
+                <div class="initiative-card">
+                    <div class="initiative-icon">📚</div>
+                    <h3>Educational Outreach</h3>
+                    <p>Conducting seminars, workshops, and educational programs to promote awareness of Hindu philosophy, history, and contemporary social issues.</p>
+                    <a href="https://en.wikipedia.org/wiki/Hindu_Mahasabha" class="learn-more">Learn More →</a>
+                </div>
+
+                <div class="initiative-card">
+                    <div class="initiative-icon">👥</div>
+                    <h3>Local Chapters</h3>
+                    <p>Establishing active chapters in Hyderabad, Warangal, Karimnagar, and other key cities to ensure grassroots community engagement and support.</p>
+                    <a href="#" class="learn-more">COMING SOON!</a>
+                </div>
+
+                <div class="initiative-card">
+                    <div class="initiative-icon">🤝</div>
+                    <h3>Community Service</h3>
+                    <p>Organizing blood donation drives, disaster relief efforts, and support programs for underprivileged communities throughout Telangana.</p>
+                    <a href="#" class="learn-more">WORK IN PROGRESS!</a>
+                </div>
+
+                <div class="initiative-card">
+                    <div class="initiative-icon">🎭</div>
+                    <h3>Cultural Events</h3>
+                    <p>Celebrating traditional festivals, organizing cultural performances, and promoting local arts and crafts to strengthen our cultural identity.</p>
+                    <a href="#" class="learn-more">COMING SOON!</a>
+                </div>
+
+                <div class="initiative-card">
+                    <div class="initiative-icon">🌱</div>
+                    <h3>Youth Development</h3>
+                    <p>Mentoring young leaders through leadership training programs, career guidance, and character development initiatives rooted in Hindu values.</p>
+                    <a href="#" class="learn-more">WORK IN PROGRESS!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="leadership">
+        <div class="container">
+            <h1 class="section-title">Leadership</h1>
+            <H4 class="section-subtitle">Honoring our current leaders</H4>
+            <div class="leadership-content">
+                
+                <div class="current-leadership">
+                    <h3>Current Telangana Leadership</h3>
+                    
+                    <div class="leader">
+                        <div class="leader-avatar">KD</div>
+                        <div class="leader-info">
+                            <h4><span class="name-highlight">KAMLESH DAS JI MAHARAJ</span></h4> <h5>ALL INDIA NATIONAL SECRETARY</h5>
+                            </div>
+                    </div>
+
+                    <div class="leader">
+                        <div class="leader-avatar">PK</div>
+                        <div class="leader-info">
+                            <h4><span class="name-highlight">RUDRA PRASAN KUMAR</span></h4>
+                            <H5>TELANGANA STATE PRESIDENT</H5>
+                        </div>
+                    </div>
+
+                    <div class="leader">
+                        <div class="leader-avatar">YN</div>
+                        <div class="leader-info">
+                            <h4><span class="name-highlight">YOGESHWAR NAYYAR</span></h4>
+                            <H5>JOINT SECRETARY TELANGANA</H5>
+                        </div>
+                    </div>
+                    <div class="leader">
+                        <div class="leader-avatar">SL</div>
+                        <div class="leader-info">
+                            <h4><span class="name-highlight">SUDPTIO LAHIRI</span></h4>
+                            <H5>VICE PRESIDENT TELANGANA</H5>
+                        </div>
+                </div>
+            </div>
+            <div class="founding-figures">
+                    <h3>Technology and Content Specialist</h3>
+                    <div class="leader">
+                        <div class="leader-avatar">RN</div>
+                        <div class="leader-info">
+                            <h4><span class="name-highlight">RITHVIK NAYYAR</span></h4>
+                            <h5>Digital Content & IT Executive</h5>
+                        </div>
+                    </div>
+
+                    <div class="leader">
+                        <div class="leader-avatar">AL</div>
+                        <div class="leader-info">
+                            <h4><span class="name-highlight">ANTARIKSH LAHIRI</span></h4>
+                            <h5>Media Professional</h5>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h2>Connect with Us</h2>
+                    <h3>Email: info@abhm-telangana.org<br>
+                    Phone: +91 [Contact Number]</h3>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Akhil Bharat Hindu Mahasabha Telangana. Preserving heritage, serving humanity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript for enhanced functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
