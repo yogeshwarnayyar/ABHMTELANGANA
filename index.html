@@ -71,6 +71,67 @@
             z-index: -1;
         }
 
+        /* Animated Header */
+        .animated-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(255, 153, 51, 0.95) 0%, rgba(230, 133, 26, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(255, 153, 51, 0.3);
+            border-bottom: 2px solid var(--primary-saffron);
+        }
+
+        .typing-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--white);
+            margin: 0;
+            letter-spacing: 0.1em;
+            text-shadow: 
+                0 0 10px rgba(255, 255, 255, 0.8),
+                0 0 20px rgba(255, 153, 51, 0.6),
+                0 0 30px rgba(255, 153, 51, 0.4);
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid var(--white);
+            animation: typing 3s steps(16, end) 0.5s forwards, blink-caret 0.75s step-end infinite, glow-pulse 1.5s ease-in-out infinite;
+            width: 0;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--white) }
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% {
+                text-shadow: 
+                    0 0 10px rgba(255, 255, 255, 0.8),
+                    0 0 20px rgba(255, 153, 51, 0.6),
+                    0 0 30px rgba(255, 153, 51, 0.4);
+                transform: scale(1);
+            }
+            50% {
+                text-shadow: 
+                    0 0 15px rgba(255, 255, 255, 1),
+                    0 0 30px rgba(255, 153, 51, 0.8),
+                    0 0 45px rgba(255, 153, 51, 0.6),
+                    0 0 60px rgba(255, 153, 51, 0.4);
+                transform: scale(1.02);
+            }
+        }
+
         .container {
             max-width: 1600px;
             margin: 0 auto;
@@ -87,7 +148,7 @@
             padding: 3rem 0 1rem 0;
             border-bottom: none;
             position: absolute;
-            top: 0;
+            top: 80px;
             left: 0;
             right: 0;
             z-index: 100;
@@ -207,7 +268,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 12rem 0 8rem 0;
+            padding: 16rem 0 8rem 0;
             text-align: center;
             background: 
                 linear-gradient(135deg, rgba(255, 153, 51, 0.05) 0%, rgba(255, 180, 102, 0.03) 50%, transparent 100%),
@@ -732,6 +793,47 @@
             line-height: 1.5;
         }
 
+        /* Call to Action Section */
+        .cta-section {
+            padding: 6rem 0;
+            background: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(255, 153, 51, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 180, 102, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .cta-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section .section-title {
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .cta-section .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* Footer */
         footer {
             background: var(--text-primary);
@@ -808,6 +910,16 @@
 
         /* Mobile-first approach */
         @media (max-width: 768px) {
+            /* Mobile Animated Header */
+            .animated-header {
+                padding: 0.5rem 0;
+            }
+            
+            .typing-text {
+                font-size: 1.5rem;
+                letter-spacing: 0.05em;
+            }
+
             .container {
                 padding: 0 15px;
                 max-width: 100%;
@@ -817,6 +929,7 @@
             nav {
                 padding: 2rem 0 1rem 0;
                 position: relative;
+                top: 60px;
                 background: rgba(255, 255, 255, 0.95);
                 backdrop-filter: blur(10px);
                 box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
@@ -906,7 +1019,7 @@
 
             /* Mobile Hero Section - Improved layout */
             .hero {
-                padding: 2rem 0;
+                padding: 8rem 0 2rem 0;
                 min-height: auto;
                 text-align: center;
             }
@@ -1346,6 +1459,11 @@
     </style>
 </head>
 <body>
+    <!-- Animated Header -->
+    <div class="animated-header">
+        <h1 class="typing-text" id="typingText">JAI HINDU RASHTRA : जय हिन्दू राष्ट्र</h1>
+    </div>
+
     <!-- Header section completely removed for seamless design -->
 
     <nav>
@@ -1372,7 +1490,7 @@
             </div>
             <h3 class="hero-tagline">Empowering Humanity Through Hinduism</h3>
             <p class="mission-statement">
-                <span class="mission-highlight">The Akhil Bharatiya Hindu Mahasabha</span>, traces its roots to the late 19th and early 20th centuries, when various Hindu Sabhas and reform movements arose in North India to safeguard Hindu interests and culture. The first such Hindu Sabha was formed in Lahore in 1906, followed by the Punjab Hindu Sabha in 1909, championed by leaders like Lala Lajpat Rai. Building on these regional initiatives, the All-India (Sarvadeshak) Hindu Sabha was formally established in April 1915 at Haridwar during the Kumbh Mela, under the leadership of <span class="mission-highlight">Pandit Madan Mohan Malaviya</span>, with the aim of uniting Hindus politically and socially in the face of colonial reforms and communal challenges. In 1921, the organisation was renamed the Akhil Bharatiya Hindu Mahasabha, which went on to play a prominent role in the nationalist movement, Hindu consolidation, and the articulation of the ideology of Hindutva.
+            The organization was officially registered under the Societies Registration Act, XXI of 1860. <span class="mission-highlight">The Akhil Bharatiya Hindu Mahasabha</span> traces its roots to Hindu reform and Sabha movements in North India during the late 19th and early 20th centuries, including the Lahore Hindu Sabha (1906) and the Punjab Hindu Sabha (1909). Building on these initiatives, the All-India (Sarvadeshak) Hindu Sabha was founded in April 1915 at Haridwar under <span class="mission-highlight">Pandit Madan Mohan Malaviya</span>, and in 1921 it was renamed the Akhil Bharatiya Hindu Mahasabha, which went on to play a significant role in the nationalist movement, Hindu consolidation, and the articulation of Hindutva.
             </p>
             <div class="cta-buttons">
                 <a href="https://forms.gle/zxmH3HABuhjWWwUh6" class="cta-button cta-primary"> Join Hands for Humanity </a>
@@ -1491,16 +1609,28 @@
         </div>
     </section>
 
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title">Join Our Mission</h2>
+            <p class="section-subtitle">Together, we can build a stronger, unified Hindu community and serve humanity with our collective efforts.</p>
+            <div class="cta-buttons">
+                <a href="https://forms.gle/zxmH3HABuhjWWwUh6" class="cta-button cta-primary">Join Hands for Humanity</a>
+            </div>
+        </div>
+    </section>
+
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h2>Connect with Us</h2>
                     <h3>Email: president@abhmtelangana.in<br>
-                    Phone: +91 - 9393726269</h3>
+                    Phone: +91 - 9393726269 <br>
+                    Address: B-882, National Administration office, Gali no - 07, Baba Colony, Burari, Delhi - 110084
+</h3>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2025 Akhil Bharat Hindu Mahasabha Telangana. Preserving heritage, serving humanity.</p>
             </div>
@@ -1511,4 +1641,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

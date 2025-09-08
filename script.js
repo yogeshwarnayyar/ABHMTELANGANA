@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add loaded class to body for smooth appearance
     document.body.classList.add('loaded');
     
+    // Initialize animated header
+    initAnimatedHeader();
+    
     // Smooth scroll behavior for navigation links
     document.querySelectorAll('.nav-item[href^="#"]').forEach(link => {
         link.addEventListener('click', function(e) {
@@ -79,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const offset = 80; // Account for fixed navbar
+                const offset = 100; // Account for fixed animated header
                 const elementPosition = target.offsetTop - offset;
                 
                 window.scrollTo({
@@ -259,6 +262,31 @@ const utils = {
         };
     }
 };
+
+// Animated Header Functionality
+function initAnimatedHeader() {
+    const typingText = document.getElementById('typingText');
+    if (!typingText) return;
+    
+    // Reset the animation if needed
+    setTimeout(() => {
+        // Remove the typing cursor after animation completes
+        setTimeout(() => {
+            typingText.style.borderRight = 'none';
+        }, 6000);
+        
+        // Add enhanced hover effect after typing completes
+        setTimeout(() => {
+            typingText.addEventListener('mouseenter', function() {
+                this.style.animation = 'typing 5s steps(40, end) 0.5s forwards, glow-pulse 0.8s ease-in-out infinite';
+            });
+            
+            typingText.addEventListener('mouseleave', function() {
+                this.style.animation = 'typing 5s steps(40, end) 0.5s forwards, glow-pulse 1.5s ease-in-out infinite';
+            });
+        }, 6500);
+    }, 100);
+}
 
 // Export for potential module use
 if (typeof module !== 'undefined' && module.exports) {
