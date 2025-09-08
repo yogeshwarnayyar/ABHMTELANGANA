@@ -260,10 +260,13 @@
             align-items: center;
             text-align: center;
             flex: 1;
+            max-width: none;
+            margin: 0 2rem;
+            justify-content: center;
         }
 
         .main-title {
-            font-size: 5rem;
+            font-size: 3.5rem;
             margin-bottom: 0;
             background: linear-gradient(135deg, var(--primary-saffron) 0%, var(--dark-saffron) 50%, var(--deep-saffron) 100%);
             -webkit-background-clip: text;
@@ -274,7 +277,7 @@
         }
 
         .sub-title {
-            font-size: 3rem;
+            font-size: 2.2rem;
             margin-bottom: 0.5rem;
             color: var(--text-primary);
             font-weight: 600;
@@ -288,25 +291,46 @@
         .hero-title-container {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 2.5rem;
+            justify-content: space-evenly;
+            gap: 0;
             margin-bottom: 1.5rem;
             flex-wrap: nowrap;
-            max-width: 1400px;
+            max-width: 100%;
             margin-left: auto;
             margin-right: auto;
+            background: linear-gradient(135deg, var(--light-saffron) 0%, rgba(255, 245, 230, 0.8) 100%);
+            padding: 2rem 1.5rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
         }
 
         .hero-logo {
-            height: 160px;
+            height: 180px;
             width: auto;
-            flex-shrink: 0;
+            flex: 0 0 auto;
             filter: drop-shadow(0 6px 20px rgba(255, 153, 51, 0.4));
             transition: transform 0.3s ease, filter 0.3s ease;
-            order: -1;
+            border-radius: 8px;
         }
 
         .hero-logo:hover {
+            transform: scale(1.08);
+            filter: drop-shadow(0 8px 24px rgba(255, 153, 51, 0.5));
+        }
+
+        .hero-vir-image {
+            height: 180px;
+            width: auto;
+            flex: 0 0 auto;
+            filter: drop-shadow(0 6px 20px rgba(255, 153, 51, 0.4));
+            transition: transform 0.3s ease, filter 0.3s ease;
+            border-radius: 12px;
+        }
+
+        .hero-vir-image:hover {
             transform: scale(1.08);
             filter: drop-shadow(0 8px 24px rgba(255, 153, 51, 0.5));
         }
@@ -350,7 +374,7 @@
             position: relative;
             z-index: 2;
             backdrop-filter: blur(10px);
-            text-align: left;
+            text-align: justify;
         }
 
         .mission-statement::before {
@@ -748,10 +772,17 @@
         /* Tablet and medium screens */
         @media (max-width: 1024px) {
             .hero-title-container {
-                gap: 2rem;
-                flex-wrap: wrap;
-                justify-content: center;
+                gap: 0;
+                flex-wrap: nowrap;
+                justify-content: space-evenly;
                 text-align: center;
+                padding: 1.5rem 1rem;
+            }
+
+            .hero-title-wrapper {
+                max-width: none;
+                margin: 0 1.5rem;
+                flex: 1;
             }
 
             .hero-title {
@@ -759,15 +790,19 @@
             }
 
             .main-title {
-                font-size: 4rem;
+                font-size: 2.8rem;
             }
 
             .sub-title {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
             }
 
             .hero-logo {
-                height: 140px;
+                height: 120px;
+            }
+
+            .hero-vir-image {
+                height: 120px;
             }
         }
 
@@ -891,25 +926,36 @@
             }
 
             .main-title {
-                font-size: 2.5rem;
+                font-size: 1.6rem;
                 margin-bottom: 0;
             }
 
             .sub-title {
-                font-size: 1.8rem;
-                margin-bottom: 0.5rem;
+                font-size: 1.2rem;
+                margin-bottom: 0.25rem;
             }
 
             .hero-title-container {
-                flex-direction: column;
-                gap: 1.5rem;
+                flex-direction: row;
+                gap: 0;
                 margin-bottom: 1rem;
                 text-align: center;
+                padding: 1rem 0.5rem;
+                justify-content: space-evenly;
+            }
+
+            .hero-title-wrapper {
+                max-width: none;
+                margin: 0 1rem;
+                flex: 1;
             }
 
             .hero-logo {
-                height: 110px;
-                order: 0;
+                height: 80px;
+            }
+
+            .hero-vir-image {
+                height: 80px;
             }
 
             .hero-tagline {
@@ -925,7 +971,7 @@
                 font-size: 1rem;
                 line-height: 1.6;
                 margin: 1.5rem 0;
-                text-align: left;
+                text-align: justify;
                 border-radius: 15px;
             }
 
@@ -1322,10 +1368,11 @@
                     <h2 class="hero-title sub-title">Akhil Bharat Hindu Mahasabha</h2>
                     <h1 class="hero-title main-title">Telangana</h1>
                 </div>
+                <img src="vir.jpg" alt="Vir Image" class="hero-vir-image">
             </div>
             <h3 class="hero-tagline">Empowering Humanity Through Hinduism</h3>
             <p class="mission-statement">
-                Continuing the <span class="mission-highlight">legacy of Akhil Bharatiya Hindu Mahasabha</span>, founded in 1915 by the visionary <span class="mission-highlight name-highlight">Madan Mohan Malaviya</span>, we stand rooted in the principles of Hindutva and Hindu nationalism. Our Telangana chapter is dedicated to preserving our cultural heritage, promoting social welfare, and strengthening community bonds across the state.
+                <span class="mission-highlight">The Akhil Bharatiya Hindu Mahasabha</span>, traces its roots to the late 19th and early 20th centuries, when various Hindu Sabhas and reform movements arose in North India to safeguard Hindu interests and culture. The first such Hindu Sabha was formed in Lahore in 1906, followed by the Punjab Hindu Sabha in 1909, championed by leaders like Lala Lajpat Rai. Building on these regional initiatives, the All-India (Sarvadeshak) Hindu Sabha was formally established in April 1915 at Haridwar during the Kumbh Mela, under the leadership of <span class="mission-highlight">Pandit Madan Mohan Malaviya</span>, with the aim of uniting Hindus politically and socially in the face of colonial reforms and communal challenges. In 1921, the organisation was renamed the Akhil Bharatiya Hindu Mahasabha, which went on to play a prominent role in the nationalist movement, Hindu consolidation, and the articulation of the ideology of Hindutva.
             </p>
             <div class="cta-buttons">
                 <a href="https://forms.gle/zxmH3HABuhjWWwUh6" class="cta-button cta-primary"> Join Hands for Humanity </a>
@@ -1449,8 +1496,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h2>Connect with Us</h2>
-                    <h3>Email: president@abhmtelangana.in<br>
-                    Phone: +91 - 9393726269</h3>
+                    <h3>Email: info@abhm-telangana.org<br>
+                    Phone: +91 [Contact Number]</h3>
                 </div>
             </div>
             
